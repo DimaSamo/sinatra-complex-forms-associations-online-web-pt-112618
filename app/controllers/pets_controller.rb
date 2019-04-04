@@ -13,6 +13,7 @@ class PetsController < ApplicationController
 
   post '/pets' do
     @pet = Pet.new(params[:pet])
+    binding.pry
     redirect to "pets/#{@pet.id}"
   end
 
