@@ -11,7 +11,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-    @pet = Pet.new(params[pet])
+    @pet = Pet.new(params[:pet])
     redirect to "pets/#{@pet.id}"
   end
 
