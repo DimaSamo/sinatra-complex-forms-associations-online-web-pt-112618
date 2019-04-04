@@ -37,7 +37,6 @@ class PetsController < ApplicationController
     if !params["owner"]["name"]==""
       pet.owner=Owner.create(params[:owner])
     end
-    binding.pry
     redirect to "pets/#{@pet.id}"
   end
 end
